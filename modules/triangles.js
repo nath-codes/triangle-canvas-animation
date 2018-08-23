@@ -1,9 +1,9 @@
 import Triangle from "./triangle.js";
 
 class Triangles {
-    constructor(context) {
+    constructor(context, amount) {
         this.context = context;
-        this.amount = 10;
+        this.amount = amount;
         this.initalWidth = this.getInitialWidth();
         this.triangles = [];
         this.generate();
@@ -16,13 +16,18 @@ class Triangles {
     }
 
     generate() {
-        for (let i = 0; i < this.amount; i++) {
+        for (let i = 0; i <= this.amount; i++) {
             const width = this.initalWidth * i;
+            const spacer = this.initalWidth;
+            const isStatic = i === this.amount;
+
             const triangle = new Triangle(
                 this.context,
                 width,
-                this.initalWidth
+                spacer,
+                isStatic
             );
+
             this.triangles.push(triangle);
         }
     }
@@ -33,6 +38,7 @@ class Triangles {
         for (let i = 0; i < this.triangles.length; i++) {
             this.triangles[i].draw();
         }
+
         requestAnimationFrame(this.animate);
     }
 }

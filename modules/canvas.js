@@ -19,14 +19,10 @@ class Canvas {
             this.setCanvasSize(this.canvas);
             this.draw();
         });
-
-        // window.addEventListener("mousemove", event => {
-        //     console.log(`x: ${event.x} y: ${event.y}`);
-        // });
     }
 
     draw() {
-        const triangles = new Triangles(this.context);
+        const triangles = new Triangles(this.context, 10);
         triangles.animate();
     }
 }
