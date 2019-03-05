@@ -4,4 +4,4 @@ Further experiments with the Canvas API. This is a looping animation showing a g
 
 ## Demo
 
-You can view the animation [here](https://nath-codes.github.io/triangle-canvas-animation/).
+You can view the animation [here](https://nathan-kansu.github.io/triangle-canvas-animation/).
